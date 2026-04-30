@@ -1,32 +1,35 @@
-# object angle detection
-pivot_angle_script
-pivot_angle_script is a Unity MonoBehaviour script designed to manage and manipulate the Z-axis rotation (angle) of a GameObject. It provides methods to set, add, and smoothly animate the Z angle, while also exposing the current Z angle as a public variable for use by other scripts.
+# Unity Object Angle Detection Script
 
-Features
-•	Set Z Angle: Instantly set the GameObject's Z rotation to a specific value.
-•	Add to Z Angle: Increment or decrement the Z rotation by a given amount.
-•	Smooth Z Angle Animation: Animate the Z rotation smoothly over a specified duration.
-•	Keyboard Control: Increase or decrease the Z angle by 40 degrees using the 1 and 2 keys.
-•	Public Z Angle Value: The current Z angle (normalized between 0-360) is always available via the pivotZValue public variable for use in other scripts.
+![type](https://img.shields.io/badge/type-Unity%20script-blue) ![tech](https://img.shields.io/badge/tech-C%23%20%2F%20Unity-black) ![status](https://img.shields.io/badge/status-active-green)
 
-How It Works
-•	The script keeps track of the initial and last set Z angles.
-•	All angle values are normalized to the 0-360 range and rounded to the nearest integer.
-•	The Z angle can be changed directly, incrementally, or smoothly via coroutine.
-•	The pivotZValue variable is automatically updated whenever the angle changes.
+**Unity Object Angle Detection Script** is a Unity MonoBehaviour for reading, setting, adding, and smoothly animating a GameObject Z-axis angle, useful for gauges, needles, indicators, and rotation-based UI/gameplay systems.
 
-Usage
-1.	Attach the Script: Add pivot_angle_script to any GameObject whose Z rotation you want to control.
-2.	Control via Code:
-•	Use SetZAngle(float z) to set the Z angle directly.
-•	Use AddZAngle(float delta) to add or subtract from the current Z angle.
-•	Use SetZAngleSmooth(float z, float duration) to animate the Z angle.
-3.	Keyboard Shortcuts:
-•	Press 1 to increase the Z angle by 40 degrees.
-•	Press 2 to decrease the Z angle by 40 degrees.
-4.	Access Current Angle:
-•	Other scripts can read the current Z angle from the pivotZValue public variable.
+Designed for Unity beginners, gameplay programmers, UI tool builders, simulation developers, and anyone needing simple angle control in 2D or 3D scenes.
 
-Current usage
-Since it is written to manage an ammeter in the game, the needle is moved by listening to the 1, 2, 3 and 4 keys.
-Depending on the usage area, it can only be enabled to detect the angle
+## Features
+
+- Set a GameObject Z rotation directly from code.
+- Add or subtract angle deltas from the current rotation.
+- Smoothly animate angle changes over time.
+- Expose the normalized 0-360 Z angle as a public value.
+- Use keyboard shortcuts for quick testing and calibration.
+
+## Installation
+
+Copy `pivot_angle_script.cs` into your Unity project and attach it to the GameObject whose Z rotation you want to control.
+
+## Usage
+
+Call `SetZAngle`, `AddZAngle`, or `SetZAngleSmooth` from your own scripts, or use the configured test keys for manual angle changes.
+
+## SEO Keywords
+
+Unity angle detection, Unity Z rotation script, Unity gauge needle script, Unity rotation controller, Unity MonoBehaviour angle helper, object angle detection Unity
+
+## GitHub Topics
+
+`unity`, `csharp`, `math`, `rotation`, `trigonometry`, `gamedev`
+
+## Repository
+
+[View on GitHub](https://github.com/AybarsBarut/objectangledetection)
